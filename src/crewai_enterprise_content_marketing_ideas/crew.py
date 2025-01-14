@@ -30,12 +30,14 @@ class CrewaiEnterpriseContentMarketingCrew:
     @task
     def research_task(self) -> Task:
         return Task(
+            human_input=True,
             config=self.tasks_config["research_task"],
         )
 
     @task
     def content_generation_task(self) -> Task:
         return Task(
+            human_input=True,
             config=self.tasks_config["content_generation_task"], output_file="report.md"
         )
 
